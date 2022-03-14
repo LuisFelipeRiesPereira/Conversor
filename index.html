@@ -5,17 +5,51 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="style.css" rel="stylesheet">
-        <script src="script.js"></script>
+        <script src="js/script.js"></script>
     </head>
+    <header class="container">
+        <div id="logo">
+            <img src="./images/logo.png">
+        </div>
+        <div id="turma">
+            Turma: Info63MB 
+        </div>
+        <div id="nome">
+            Nome: Luis Felipe Ries Pereira
+        </div>
+    </header>
     <body>
-        Fahrenheit: <input type="text" name="fconvert">
-        <button id="btn-f" class="btn-temp-convert" onclick="convertTemp">Converter</button>
-        Celsius: <input type="text" name="cconvert">
-        <button id="btn-c" class="btn-temp-convert" onclick="convertTemp">Converter</button>
-        Kelvin: <input type="text" name="kconvert">
-        <button id="btn-k" class="btn-temp-convert" onclick="convertTemp">Converter</button>
-        <p>
-            <button onclick="clearAll()">Limpar</button>
-        </p>
+        <main class="container">
+            <h1>Conversor:</h1>
+            <div id="inputs" class="container-flex">
+            <div>
+                Fahrenheit: <input type="text" id="fconvert">
+            <div>
+                <button id="btn-f" class="btn-temp-convert" onclick="calculo(this)">Converter</button>
+            </div>
+            </div>
+            <div>
+                Celsius: <input type="text" id="cconvert">
+            <div>
+                <button id="btn-c" class="btn-temp-convert" onclick="calculo(this)">Converter</button>
+            </div>
+            </div>
+            <div>
+                Kelvin: <input type="text" id="kconvert">
+                <div>
+                <button id="btn-k" class="btn-temp-convert" onclick="calculo(this)">Converter</button>
+                </div>
+            </div>
+            <div>
+                Rankine: <input type="text" id="rconvert" >
+            <div>
+                <button id="btn-r" class="btn-temp-convert" onclick="calculo(this)">Converter</button>
+            </div>
+            </div>
+            </div>
+            <p id="cleaner">
+                <button onclick="limpar()">Limpar</button>
+            </p>
+        </main>
     </body>
 </html>
